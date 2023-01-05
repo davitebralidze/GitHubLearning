@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Inspiration&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ddce5e5ac1.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="style.css"> css-ის იმპორტირება Html-ში  -->
+    <!-- ".classname" რათა გავლენა მოვახდინოთ კლასზე (css ფაილშო იქმნება)-->
+    <!-- "#id" რათა გავლენა მოვახდინოთ id-ზე (css ფაილშო იქმნება)-->
+
+</head>
+
+<body>
+
+    
+
+    <div class="template">
+        <a target=_blank href="/files/project.zip" title="Template"> <i class="fa-solid fa-download"></i> Template </a>
+    </div>
+
+    <div class="registrationbox">
+
+        <h1 class="regtitle"> <i class="fa-solid fa-file-lines"></i> REGISTRATION FORM </h1>
+        <hr />
+        <br />
+
+
+        <div class="mainpagepicture"></div>
+
+
+        <div>
+            <form action="action_page.php" method="GET">
+                <div>
+                    <label for="fname">
+                        <i class="fa-solid fa-address-card"></i>
+                    </label>
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" class="maininfo" required>
+                </div>
+
+                <br />
+
+                <div>
+                    <label for="lname">
+                        <i class="fa-solid fa-address-card"></i>
+                    </label>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="email" placeholder="Last Name" class="maininfo" required>
+                </div>
+
+                <br />
+
+                <div>
+                    <label for="email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </label>
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" placeholder="E-Mail" class="maininfo" required>
+                </div>
+
+                <br />
+
+                <div>
+                    <label for="password">
+                        <i class="fa-solid fa-lock"></i>
+                    </label>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" class="maininfo"
+                        maxlength="20" required>
+                    <p style="font-size: 14px;"><span style="color: red;"> * </span> Max password size 20 char</p>
+                </div>
+
+                <!-- For უკავშირდება ID-ს -->
+
+                <div>
+                    <label for="repeat-password">
+                        <i class="fa-solid fa-lock"></i>
+                    </label>
+                    <label for="repeat-password">Repeat Password:</label>
+                    <input type="password" id="repeat-password" name="repeat-password" placeholder="Repeat Password"
+                        class="maininfo" required maxlength="20">
+                </div>
+
+                <br />
+
+                <div>
+                    <label for="phone">
+                        <i class="fa-solid fa-phone"></i>
+                    </label>
+                    <label for="phone">Phone N:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(+123) 345-678" class="maininfo" required>
+                </div>
+
+                <br />
+
+                <div>
+                    <label for="bdate">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </label>
+                    <label for="bdate">Birth Date:</label>
+                    <input type="date" id="bdate" name="bdate" class="maininfo" required>
+                </div>
+
+                <br />
+
+                <div>
+
+                    <!-- name="gender" არის იმისთვის რომ აღიქვას როგორც ერთი ჯგუფი და იყოს single select-->
+                    <!-- ასევე name არის იმისთვის რომ სწორად შეინახოს ბაზაში მონაცემი, name="gender" შეინახავს არჩევანს გრაფაში gender-->
+                    <!-- For-ით და ID-ით ქონექთდება ლოგიკურად ლეიბლი და ინფუთი -->
+                    <!-- ID-ში ადგილი ეცადე არ გამოტოვო -->
+                    <!-- For და ID რომ არ დამჭირდეს, ლეიბლშივე უნდა შევუქმნა ინფუთი -->
+                    <!-- Value არის საჭირო რადგან წაიღოს ბაზაში მნიშვნელობა, რაც ლეიბლში წერია ეგ არის ვიზუალი მხოლოდ და არა კონკრეტული მნიშვნელობა -->
+
+                    <i class="fa-solid fa-venus-mars"></i>
+                    <label for="gender"> Gender : </label>
+
+                    <label for="Male"> Male </label>
+                    <input type="radio" id="Male" name="gender" value="Male" required>
+
+                    <label for="Female"> Female </label>
+                    <input type="radio" id="Female" name="gender" value="Female" required>
+
+                </div>
+
+                <br />
+
+                <div>
+                    <i class="fa-solid fa-comment"></i>
+                    <label for="question">Would you like to receive E-Mail notifications?</label>
+                    <select id="question" name="answer" required>
+                        <option value="yes"> Yes </option>
+                        <option value="no"> No </option>
+                    </select>
+                </div>
+
+                <br />
+
+                <div>
+                    <a target=_blank href="/files/terms&conditions.pdf" title="Open Terms&Conditions"> <i
+                            class="fa-solid fa-scale-balanced"></i> Terms & Conditions</a>
+                    <input type="checkbox" name="terms&agreemant" required>
+                </div>
+
+                <br />
+
+                <div class="btnwr">
+                    <button class="button" type="submit"> Submit </button>
+                    <button class="button" type="reset"> Clear </button>
+                </div>
+
+                <br />
+
+            </form>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="warning">®This webpage is a testing product <i class="fa-solid fa-road-barrier"></i></div>
+
+</body>
+
+</html>
